@@ -1,0 +1,88 @@
+///////////////////////////// 변수 - 전역 설정
+$color : #000;
+.box1{
+  $color : #111 !global;
+  background : $color;
+}
+.box2{
+  background : $color;
+}
+.box3{
+  $color : #222;
+  background : $color;
+}
+// .box1 {
+//   background: #111;
+// }
+
+// .box2 {
+//   background: #111;
+// }
+
+// .box3 {
+//   background: #222;
+// }
+///////////////////////////// 변수 - 초깃값 설정
+$color-primary : red;
+.box{
+  $color-primary : blue !default;
+  background : $color-primary;
+}
+// .box {
+//   background: red;
+// }
+///////////////////////////// 변수 - 문자 보간
+$family : unquote("Droid+Sans");
+@import url("http://fonts.googleapis.com/css?family=#{$family}");
+
+// @import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+
+///////////////////////////// import
+@import "main03";
+
+///////////////////////////// 연산 - 논리
+$w : 100px;
+.item{
+  display : block;
+  // @if($w > 50px){
+  // @if($w > 150px){
+  // @if($w > 50px and $w > 90px){
+  // @if($w > 50px and $w < 90px){
+  // @if($w > 50px or $w < 90px){
+  @if not($w < 50px){
+    width : 400px;
+  }
+}
+///////////////////////////// 재활용 - Mixin, Include
+@mixin size($w: 100px, $h: 100px){
+  width : $w;
+  height : $h;
+}
+
+.box1{
+  // @include size(100px, 100px);
+  @include size;
+}
+.box2 { 
+  // @include size(100px, 100px);
+  @include size($h : 300px);
+}
+.box3{
+  // @include size(100px, 100px);
+  @include size;
+}
+// .box1 {
+//   width: 100px;
+//   height: 100px;
+// }
+
+// .box2 {
+//   width: 100px;
+//   height: 300px;
+// }
+
+// .box3 {
+//   width: 100px;
+//   height: 100px;
+// }
+///////////////////////////// 재활용 - Mixin, Include
