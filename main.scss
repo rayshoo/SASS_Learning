@@ -1,0 +1,118 @@
+///////////////////////////// 중첩
+.container{
+  $size : 100px;
+  .item{
+    width : $size*3;
+    height : $size;
+    background : tomato;
+  }
+}
+// .container .item {
+//   width: 300px;
+//   height: 100px;
+//   background: tomato;
+// }
+///////////////////////////// 상위 선택자 참조
+.btn{
+  width : 100px;
+  height : 100px;
+  &.active {
+    color : red;
+  }
+}
+// .btn {
+//   width: 100px;
+//   height: 100px;
+// }
+// .btn.active {
+//   color: red;
+// }
+///////////////////////////// 상위 선택자 참조
+.fs{
+  &-small {
+    font-size : 14px;
+  }
+  &-medium {
+    font-size : 16px;
+  }
+  &-large {
+    font-size : 18px;
+  }
+}
+// .fs-small {
+//   font-size: 14px;
+// }
+// .fs-medium {
+//   font-size: 16px;
+// }
+// .fs-large {
+//   font-size: 18px;
+// }
+///////////////////////////// 중첩 벗어나기
+.section {
+  $width: 100px;
+  $height : 200px;
+
+  width : $width;
+  height : $height;
+  .item {
+    width : $width;
+    height : $height;
+  }
+  @at-root .box{
+    width : $width;
+    height : $height;
+  }
+}
+// .section {
+//   width: 100px;
+//   height: 200px;
+// }
+// .section .item {
+//   width: 100px;
+//   height: 200px;
+// }
+// .box {
+//   width: 100px;
+//   height: 200px;
+// }
+///////////////////////////// 중첩된 속성 정의
+.box{
+  font: {
+    weight : bold;
+    size : 10px;
+    family : sans-serif;
+  };
+  margin : {
+    top : 10px;
+    left : 20px;
+  };
+  padding : {
+    bottom : 40px;
+    right : 30px;
+  }
+}
+// .box {
+//   font-weight: bold;
+//   font-size: 10px;
+//   font-family: sans-serif;
+//   margin-top: 10px;
+//   margin-left: 20px;
+//   padding-bottom: 40px;
+//   padding-right: 30px;
+// }
+///////////////////////////// 변수
+$color-primary : #e96900;
+$url-images : "/assets/images/";
+$w : 200px;
+
+.box{
+  width : $w;
+  margin-left : $w;
+  background : $color-primary url($url-images + "bg.jpg");
+}
+// .box {
+//   width: 200px;
+//   margin-left: 200px;
+//   background: #e96900 url("/bg.a15e6df0.jpg");
+// }

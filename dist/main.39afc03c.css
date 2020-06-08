@@ -1,0 +1,54 @@
+.container .item {
+  width: 300px;
+  height: 100px;
+  background: tomato;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+}
+.btn.active {
+  color: red;
+}
+
+.fs-small {
+  font-size: 14px;
+}
+.fs-medium {
+  font-size: 16px;
+}
+.fs-large {
+  font-size: 18px;
+}
+
+.section {
+  width: 100px;
+  height: 200px;
+}
+.section .item {
+  width: 100px;
+  height: 200px;
+}
+.box {
+  width: 100px;
+  height: 200px;
+}
+
+.box {
+  font-weight: bold;
+  font-size: 10px;
+  font-family: sans-serif;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+}
+
+.box {
+  width: 200px;
+  margin-left: 200px;
+  background: #e96900 url("/bg.a15e6df0.jpg");
+}
+
+/*# sourceMappingURL=/main.39afc03c.css.map */
