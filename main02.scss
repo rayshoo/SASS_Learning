@@ -86,3 +86,27 @@ $w : 100px;
 //   height: 100px;
 // }
 ///////////////////////////// 재활용 - Mixin, Include
+@mixin large-text{
+  font : {
+    size : 22px;
+    weight : bold;
+    family : sans-serif;
+  }
+  
+  color : orange;
+
+  &::after {
+    content : '!!';
+  }
+
+  span.icon{
+    background : url('./assets/images/bg.jpg');
+  }
+}
+
+.box1{
+  @include large-text;
+}
+.box2{
+  @include large-text;
+}
