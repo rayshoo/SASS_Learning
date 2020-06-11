@@ -54,6 +54,7 @@ $w : 100px;
   }
 }
 ///////////////////////////// 재활용 - Mixin, Include
+/* 기본값 설정 */
 @mixin size($w: 100px, $h: 100px){
   width : $w;
   height : $h;
